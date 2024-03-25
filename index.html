@@ -663,6 +663,10 @@ function restartApp() {
         document.getElementById('stage2a').style.display = 'none';
         document.getElementById('stage3').style.display = 'none';
         document.getElementById('stage4').style.display = 'none';
+        document.getElementById('stage3a').style.display='block';
+        document.getElementById('stage3c').style.display='none'; 
+        eGFRfind=false;
+
         //  checkboxes
         document.getElementById('messagePage').style.display = 'none';
         var checkboxes = document.querySelectorAll('input[type=checkbox]');
@@ -674,6 +678,11 @@ function restartApp() {
         textInputs.forEach(function(input) {
             input.value = '';
         });
+        var numberInputs = document.querySelectorAll('input[type=number]');
+        numberInputs.forEach(function(input) {
+            input.value = '';
+        });
+        
         resetBanner();    
         currentRisk=1;
         currentStage=1;
